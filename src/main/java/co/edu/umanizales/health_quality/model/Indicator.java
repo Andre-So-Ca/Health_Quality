@@ -2,6 +2,7 @@ package co.edu.umanizales.health_quality.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -12,6 +13,7 @@ import lombok.NoArgsConstructor;
     private String description;
     private TechnicalSheet technicalSheet; // Composition
     private Goal goal;                     // Association
-    private GoalStatus status;             // Enum: OUT_OF_GOAL, GOAL, ABOVE_GOAL
+    private GoalStatus status;
+    private List<DataRecord> dataRecords;
     public abstract void calculatePerformance(double value);
 }
